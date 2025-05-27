@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option csharp_namespace = "CountryInfo.Grps";
+
+package country;
+
+service CountryService {
+  rpc GetCountry (GetCountryRequest) returns (GetCountryResponse);
+}
+
+message GetCountryRequest {
+  string name = 1;
+}
+
+message GetCountryResponse {
+  string id = 1;
+  string code = 2;
+  string name = 3;
+  string region = 4;
+  string subregion = 5;
+  string capital = 6;
+  int64 population = 7;   
+  string currency = 8;
+  CountryStatistic statistic = 9;
+}
+
+message CountryStatistic {
+  int32 total_requests = 1;
+  string last_requested_at = 2;
+  string added_at = 3;
+}

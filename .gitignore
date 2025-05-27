@@ -396,3 +396,5 @@ FodyWeavers.xsd
 # Docker Containers
 */.containers
 Renda.Subject/.idea
+
+*.db
