@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using CountryInfo.Core.Abstractions.CountryService;
 using CountryInfo.Core.Exceptions;
 
 namespace CountryInfo.Core.Services;
@@ -22,9 +23,4 @@ public class CountryService(HttpClient httpClient)
         return countries[0];
     }
     
-}
-
-public interface ICountryService
-{
-    Task<CountryResponse> GetCountryByNameAsync(string name);
 }
